@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="BayanCloudTech Consulting Group Inc. company brochure">
+  <title>BayanCloudTech | Company Brochure</title>
+  <style>
+    :root{--green:#14833b;--dark:#075326;--lime:#67be35;--pale:#eaf7ed;--ink:#173126;--muted:#587064;--line:#cfe5d4}
+    *{box-sizing:border-box}
+    body{margin:0;background:#e8f1ea;color:var(--ink);font:15px/1.55 Arial,Helvetica,sans-serif}
+    a{color:var(--green);font-weight:700}
+    .brochure{max-width:980px;margin:0 auto;background:#fff;box-shadow:0 10px 30px #0a46201f}
+    section{padding:42px 72px}
+    .hero{position:relative;overflow:hidden;padding-top:48px;padding-bottom:58px;background:linear-gradient(145deg,var(--dark),var(--green) 65%,var(--lime));color:#fff}
+    .hero:after{position:absolute;right:-170px;top:80px;width:500px;height:500px;border:1px solid #ffffff3d;border-radius:50%;content:""}
+    .brand{position:relative;z-index:1;display:flex;align-items:center;gap:14px;font-size:14px;font-weight:800;letter-spacing:.8px}
+    .logo{width:64px;height:64px;padding:4px;border-radius:10px;background:#fff;object-fit:contain}
+    .hero-content{position:relative;z-index:1;max-width:680px;margin:38px 0 24px}
+    .eyebrow{color:var(--green);font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+    .hero .eyebrow{color:#d7ffd2}
+    h1,h2,h3,p{margin-top:0}
+    h1{margin:20px 0 14px;color:#fff;font-size:clamp(39px,6vw,58px);line-height:1.04;letter-spacing:-1.5px}
+    h1 span{color:#c7f77e}
+    h2{margin:0 0 12px;color:var(--dark);font-size:32px;line-height:1.15}
+    h3{margin:0 0 7px;color:var(--dark);font-size:17px}
+    p{color:var(--muted)}
+    .lead{max-width:650px;color:#eaffea;font-size:19px}
+    .intro{font-size:18px;max-width:760px}
+    .band{margin-top:22px;padding:20px 22px;border-left:5px solid var(--lime);background:var(--pale)}
+    .band strong{color:var(--dark)}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 36px;margin:18px 0}
+    .tile{padding:2px 0 12px;border-bottom:1px solid var(--line)}
+    .tile p{margin:0;font-size:13px}
+    .num{color:var(--green);font-size:11px;font-weight:800;letter-spacing:1px}
+    .service-flow{margin-top:16px}
+    .service-row{display:grid;grid-template-columns:40px 1fr;gap:14px;padding:12px 0;border-top:1px solid var(--line)}
+    .service-row:last-child{border-bottom:1px solid var(--line)}
+    .service-row h3{margin-bottom:5px}
+    .service-row p{margin:0;font-size:14px}
+    .platforms{background:linear-gradient(180deg,#f7fbf7 0%,#edf8ef 100%)}
+    .tags{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 18px}
+    .tag{padding:7px 11px;border:1px solid var(--line);border-radius:8px;background:var(--pale);color:var(--dark);font-size:13px;font-weight:700}
+    .partner-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+    .partner{display:grid;min-height:64px;place-items:center;padding:8px;border:1px solid var(--line);border-radius:8px;background:#fff}
+    .partner img{max-width:125px;max-height:34px;object-fit:contain}
+    .solution-flow{max-width:760px;margin:14px 0 18px}
+    .solution-flow p{margin:0;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+    .solution-flow strong{color:var(--dark)}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:18px}
+    .step{padding:11px 0;border-top:3px solid var(--green);background:transparent}
+    .step b{display:block;margin-bottom:7px;color:var(--green);font-size:11px}
+    .step span{color:var(--dark);font-weight:700}
+    .step p{margin:7px 0 0;font-size:12px}
+    .contact{background:linear-gradient(180deg,#eaf7ed 0%,#dff1e3 100%)}
+    .contact h2{font-size:30px}
+    .contact-intro{max-width:680px}
+    .contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:18px}
+    .contact-box{min-height:105px;padding:18px 0;border-top:1px solid var(--line)}
+    .contact-box p{margin:5px 0}
+    .contact-box strong{color:var(--dark)}
+    @media(max-width:700px){
+      section{padding:30px 24px}.grid,.contact-grid,.partner-grid{grid-template-columns:1fr}.steps{grid-template-columns:repeat(2,1fr)}
+    }
+  </style>
+</head>
+<body>
+  <main class="brochure">
+    <section class="hero">
+      <div class="brand"><img class="logo" src="email-images/company_logo.jpeg" alt="BCT CGI logo"><span>BAYANCLOUDTECH CONSULTING GROUP INC.</span></div>
+      <div class="hero-content">
+        <div class="eyebrow">Cloud · Data · AI</div>
+        <h1>Build smarter with <span>data.</span><br>Move forward with confidence.</h1>
+        <p class="lead">BayanCloudTech Consulting Group Inc. delivers practical cloud, data engineering, analytics and AI solutions for modern businesses.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Introduction</div>
+      <h2>Modern data foundations. Practical business possibilities.</h2>
+      <p class="intro">BayanCloudTech Consulting Group Inc. helps organizations design, modernize and operate cloud data platforms that support reliable analytics and responsible AI adoption.</p>
+      <div class="band"><strong>Our focus</strong><p style="margin:7px 0 0">Connect data systems, improve platform foundations and turn technical requirements into secure, maintainable solutions.</p></div>
+      <div class="grid">
+        <article class="tile"><div class="num">01</div><h3>Technical depth</h3><p>Architecture and engineering experience across cloud, data and analytics workloads.</p></article>
+        <article class="tile"><div class="num">02</div><h3>Practical delivery</h3><p>Clear scope, measurable outcomes and implementation aligned to operating needs.</p></article>
+        <article class="tile"><div class="num">03</div><h3>Modern platforms</h3><p>Cloud-native foundations for pipelines, warehouses, lakehouses and AI workloads.</p></article>
+        <article class="tile"><div class="num">04</div><h3>Long-term support</h3><p>Documentation, enablement and engineering support beyond initial implementation.</p></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Services</div>
+      <h2>Data engineering and AI service portfolio</h2>
+      <p>Technical services for data platform modernization, engineering and intelligent solutions.</p>
+      <div class="service-flow">
+        <article class="service-row"><div class="num">01</div><div><h3>Consulting services and data engineering pathways</h3><p>End-to-end data strategy for transformation journeys, including modernization roadmaps, platform selection and discovery workshops.</p></div></article>
+        <article class="service-row"><div class="num">02</div><div><h3>Data migration and modernization</h3><p>Cloud data engineering, modern data pipelines, cloud migration, lakehouse adoption, data warehouse and ETL modernization.</p></div></article>
+        <article class="service-row"><div class="num">03</div><div><h3>Data marketplace and governance</h3><p>Data exchange platforms, data APIs, virtualization, cataloging, quality and governed data access.</p></div></article>
+        <article class="service-row"><div class="num">04</div><div><h3>Data operations</h3><p>Data platform maintenance, observability, automation and DataOps for a dependable data management lifecycle.</p></div></article>
+        <article class="service-row"><div class="num">05</div><div><h3>AI services</h3><p>Machine learning, NLP, MLOps, AutoML, deep learning, augmented analytics, BI and data visualization.</p></div></article>
+      </div>
+    </section>
+
+    <section class="platforms">
+      <div class="eyebrow">Solutions &amp; platforms</div>
+      <h2>Connected platforms. Flexible solutions.</h2>
+      <p>We align technology choices to your existing environment, delivery model and business priorities.</p>
+      <div class="solution-flow">
+        <p><strong>Lakehouse implementation</strong> — Foundations for engineering, warehousing, analytics and AI workloads.</p>
+        <p><strong>EDW modernization</strong> — Modernization pathways from traditional warehouses to cloud data platforms.</p>
+        <p><strong>Legacy migration</strong> — Assessment, sequencing, secure transfer and validation for critical workloads.</p>
+        <p><strong>Governed data access</strong> — Catalog, permissions, lineage and operational controls for trusted data use.</p>
+      </div>
+      <div class="partner-grid" aria-label="Technology partner logos">
+        <div class="partner"><img src="email-images/Amazon_Web_Services_Logo.svg" alt="AWS logo"></div>
+        <div class="partner"><img src="email-images/Microsoft_Azure_Logo.svg" alt="Azure logo"></div>
+        <div class="partner"><img src="email-images/Databricks_Logo.png" alt="Databricks logo"></div>
+        <div class="partner"><img src="email-images/Apache_Spark_logo.svg" alt="Apache Spark logo"></div>
+        <div class="partner"><img src="email-images/Terraform_Product_Vendor_Logo.svg" alt="Terraform logo"></div>
+        <div class="partner"><img src="email-images/claude-logo-png_seeklogo-554540.png" alt="Claude logo"></div>
+      </div>
+      <div class="tags"><span class="tag">Cloud platforms</span><span class="tag">Data engineering</span><span class="tag">Analytics</span><span class="tag">AI enablement</span><span class="tag">Governance</span><span class="tag">Platform operations</span></div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Delivery approach</div>
+      <h2>A clear path from requirement to solution.</h2>
+      <p class="intro">We use a collaborative delivery approach to establish shared expectations, scope, architecture and acceptance criteria.</p>
+      <div class="steps">
+        <div class="step"><b>STEP 01</b><span>Discover</span><p>Understand goals, systems, data and constraints.</p></div>
+        <div class="step"><b>STEP 02</b><span>Design</span><p>Define architecture, scope, milestones and controls.</p></div>
+        <div class="step"><b>STEP 03</b><span>Build &amp; validate</span><p>Implement components and test against requirements.</p></div>
+        <div class="step"><b>STEP 04</b><span>Transition</span><p>Document, enable teams and plan ongoing support.</p></div>
+      </div>
+      <div class="band"><strong>Engineering principles</strong><p style="margin:7px 0 0">Secure by design · Automate where practical · Test measurable outcomes · Document operational ownership.</p></div>
+    </section>
+
+    <section class="contact">
+      <div class="eyebrow">Contact</div>
+      <h2>A conversation, not a prescriptive pitch</h2>
+      <p class="contact-intro">Let’s discuss your roadmap and where business value is greatest. Would you be open to a 20-minute discussion to explore your data and technology priorities?</p>
+      <div class="contact-grid">
+        <div class="contact-box"><strong>Contact</strong><p>Perry Angeles<br>Co-founder and Partner Manager</p></div>
+        <div class="contact-box"><strong>Company</strong><p>BayanCloudTech Consulting Group Inc.<br>Building Possibilities. Delivering Impact.</p></div>
+        <div class="contact-box"><strong>Online</strong><p><a href="https://bayancloudtech.com/">bayancloudtech.com</a><br><a href="https://www.linkedin.com/company/bayancloudtech/">LinkedIn</a></p></div>
+        <div class="contact-box"><strong>Email</strong><p><a href="mailto:partnerops@bayancloudtech.com">partnerops@bayancloudtech.com</a><br>Or simply reply to this email.</p></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

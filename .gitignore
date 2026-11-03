@@ -1,0 +1,10 @@
+# Local and editor files
+.vscode/
+.idea/
+*.code-workspace
+*.log
+
+# Draft and email-only brochure files
+README.txt
+BCT_Email_Paste_Ready.html
+bayancloudtech_company_brochure_sample.html
