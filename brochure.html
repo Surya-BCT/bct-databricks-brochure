@@ -9,6 +9,10 @@
   body { margin:0; padding:0; width:100%; background:#e8f1ea; -webkit-text-size-adjust:100%; }
   table { border-collapse:collapse; }
   img { border:0; display:block; }
+  td[height="64"] img { width:110px !important; height:34px !important; object-fit:contain; }
+  .service-item {border-radius:8px; overflow:hidden; }
+  .service-item td { padding:12px 14px;border:1px solid #b9dcc3}
+  .service-item td:first-child { padding-right:0; }
   a { color:#14833b; }
   @media only screen and (max-width:640px) {
     .wrap { width:100% !important; }
@@ -33,25 +37,25 @@
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" bgcolor="#e8f1ea">
 <tr><td align="center" style="padding:24px 12px;">
 
-<table role="presentation" class="wrap" width="640" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="width:640px;max-width:640px;background:#ffffff;border-radius:14px;overflow:hidden;">
+<table role="presentation" class="wrap" width="800" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="width:800px;max-width:800px;background:#ffffff;border-radius:14px;overflow:hidden;">
 
   <!-- Top accent -->
   <tr><td height="6" bgcolor="#67be35" style="height:6px;line-height:6px;font-size:0;background:linear-gradient(90deg,#075326,#14833b,#67be35);">&nbsp;</td></tr>
 
   <!-- Brand bar -->
   <tr>
-    <td class="pad" style="padding:20px 44px;background:#ffffff;">
+    <td class="pad" style="padding:5px 44px;background:#ffffff;">
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
         <tr>
-          <td width="56" valign="middle">
+          <!-- <td width="56" valign="middle">
             <img src="email-images/company_logo.jpeg" width="52" height="52" alt="BayanCloudTech logo" style="width:52px;height:52px;object-fit:contain;" />
-          </td>
+          </td> -->
           <td valign="middle" style="padding-left:12px;">
             <div style="font-size:14px;line-height:18px;font-weight:800;letter-spacing:1px;color:#075326;">BAYANCLOUDTECH</div>
             <div style="font-size:10px;line-height:14px;letter-spacing:2px;color:#587064;text-transform:uppercase;">Consulting Group Inc.</div>
           </td>
           <td align="right" valign="middle" class="hide-m" style="font-size:11px;letter-spacing:2px;color:#14833b;font-weight:800;text-transform:uppercase;">
-            Company Brochure
+            Partner Update
           </td>
         </tr>
       </table>
@@ -60,7 +64,7 @@
 
   <!-- Hero -->
   <tr>
-    <td class="pad" bgcolor="#075326" style="padding:56px 44px 52px;background:#075326;background-image:linear-gradient(145deg,#075326 0%,#0e6f33 55%,#14833b 100%);">
+    <td class="pad" bgcolor="#075326" style="padding:20px 44px 20px;background:#075326;background-image:radial-gradient(circle at 90% 100%,transparent 0,transparent 178px,rgba(199,247,126,.32) 179px,rgb(160, 243, 35) 181px,transparent 182px),radial-gradient(circle at 90% 100%,rgba(136, 206, 31, 0.87) 0,rgba(159, 239, 39, 0.12) 30%,transparent 68%),linear-gradient(145deg,#075326 0%,#0e6f33 55%,#14833b 100%);">
       <div style="font-size:11px;letter-spacing:3px;font-weight:800;color:#c7f77e;text-transform:uppercase;">Cloud &nbsp;·&nbsp; Data &nbsp;·&nbsp; AI</div>
       <h1 class="h1" style="margin:16px 0 18px;font-size:44px;line-height:50px;letter-spacing:-1px;color:#ffffff;font-weight:800;">
         Build smarter with <span style="color:#c7f77e;">data.</span><br />Move forward with confidence.
@@ -83,13 +87,13 @@
 
   <!-- Pillars strip -->
   <tr>
-    <td bgcolor="#eaf7ed" style="background:#eaf7ed;padding:0;">
+    <td bgcolor="#eaf7ed" style="background:#d8f0de;padding:0;">
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
         <tr>
-          <td class="pillar" width="25%" align="center" style="padding:16px 6px;font-size:12px;font-weight:800;color:#075326;letter-spacing:.5px;border-right:1px solid #cfe5d4;">&#9729; Cloud</td>
-          <td class="pillar" width="25%" align="center" style="padding:16px 6px;font-size:12px;font-weight:800;color:#075326;letter-spacing:.5px;border-right:1px solid #cfe5d4;">&#9881; Data Engineering</td>
-          <td class="pillar" width="25%" align="center" style="padding:16px 6px;font-size:12px;font-weight:800;color:#075326;letter-spacing:.5px;border-right:1px solid #cfe5d4;">&#9638; Analytics</td>
-          <td class="pillar" width="25%" align="center" style="padding:16px 6px;font-size:12px;font-weight:800;color:#075326;letter-spacing:.5px;">&#10022; AI Enablement</td>
+          <td class="pillar" width="25%" align="center" style="padding:16px 6px;font-size:12px;font-weight:800;color:#075326;letter-spacing:.5px;border-right:2px solid #0ba324a4;border-bottom:1px solid #0ba324a4;">&#9729; Cloud</td>
+          <td class="pillar" width="25%" align="center" style="padding:16px 6px;font-size:12px;font-weight:800;color:#075326;letter-spacing:.5px;border-right:2px solid #0ba324a4;border-bottom:1px solid #0ba324a4;">&#9881; Data Engineering</td>
+          <td class="pillar" width="25%" align="center" style="padding:16px 6px;font-size:12px;font-weight:800;color:#075326;letter-spacing:.5px;border-right:2px solid #0ba324a4;border-bottom:1px solid #0ba324a4;">&#9638; Analytics</td>
+          <td class="pillar" width="25%" align="center" style="padding:16px 6px;font-size:12px;font-weight:800;color:#075326;letter-spacing:.5px;border-bottom:1px solid #0ba324a4;">&#10022; AI Enablement</td>
         </tr>
       </table>
     </td>
@@ -97,10 +101,10 @@
 
   <!-- Introduction -->
   <tr>
-    <td bgcolor="#eef8f0" class="pad" style="padding:48px 44px 12px;">
+    <td class="pad" style="padding:20px 44px 12px;background-image:linear-gradient(-90deg,#ffffff 0%,#f1faf3e7 35%,#e2f4e6 70%,#d3eed9c5 100%);">
       <div style="font-size:11px;letter-spacing:3px;font-weight:800;color:#14833b;text-transform:uppercase;">Introduction</div>
       <h2 class="h2" style="margin:10px 0 14px;font-size:29px;line-height:35px;color:#075326;font-weight:800;">Modern data foundations.<br />Practical business possibilities.</h2>
-      <p style="margin:0 0 22px;font-size:16px;line-height:25px;color:#587064;">
+      <p style="margin:0 0 5px;font-size:16px;line-height:25px;color:#587064;">
         BayanCloudTech Consulting Group Inc. helps organizations design, modernize and operate cloud data platforms that support reliable analytics and responsible AI adoption.
       </p>
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
@@ -115,163 +119,105 @@
     </td>
   </tr>
 
-  <!-- Why us 2x2 -->
-  <tr>
-    <td class="pad" style="padding:18px 44px 40px;">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
-        <tr>
-          <td class="stack stack-gap" width="50%" valign="top" style="padding:0 8px 16px 0;">
-            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #cfe5d4;border-radius:10px;">
-              <tr><td style="padding:18px;">
-                <div style="font-size:12px;font-weight:800;color:#67be35;letter-spacing:1px;">01</div>
-                <div style="margin:4px 0 6px;font-size:16px;font-weight:800;color:#075326;">Technical depth</div>
-                <div style="font-size:13px;line-height:20px;color:#587064;">Architecture and engineering experience across cloud, data and analytics workloads.</div>
-              </td></tr>
-            </table>
-          </td>
-          <td class="stack stack-gap" width="50%" valign="top" style="padding:0 0 16px 8px;">
-            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #cfe5d4;border-radius:10px;">
-              <tr><td style="padding:18px;">
-                <div style="font-size:12px;font-weight:800;color:#67be35;letter-spacing:1px;">02</div>
-                <div style="margin:4px 0 6px;font-size:16px;font-weight:800;color:#075326;">Practical delivery</div>
-                <div style="font-size:13px;line-height:20px;color:#587064;">Clear scope, measurable outcomes and implementation aligned to operating needs.</div>
-              </td></tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td class="stack stack-gap" width="50%" valign="top" style="padding:0 8px 0 0;">
-            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #cfe5d4;border-radius:10px;">
-              <tr><td style="padding:18px;">
-                <div style="font-size:12px;font-weight:800;color:#67be35;letter-spacing:1px;">03</div>
-                <div style="margin:4px 0 6px;font-size:16px;font-weight:800;color:#075326;">Modern platforms</div>
-                <div style="font-size:13px;line-height:20px;color:#587064;">Cloud-native foundations for pipelines, warehouses, lakehouses and AI workloads.</div>
-              </td></tr>
-            </table>
-          </td>
-          <td class="stack" width="50%" valign="top" style="padding:0 0 0 8px;">
-            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #cfe5d4;border-radius:10px;">
-              <tr><td style="padding:18px;">
-                <div style="font-size:12px;font-weight:800;color:#67be35;letter-spacing:1px;">04</div>
-                <div style="margin:4px 0 6px;font-size:16px;font-weight:800;color:#075326;">Long-term support</div>
-                <div style="font-size:13px;line-height:20px;color:#587064;">Documentation, enablement and engineering support beyond initial implementation.</div>
-              </td></tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-
   <!-- Services -->
   <tr>
-    <td class="pad" bgcolor="#f6fbf7" style="padding:46px 44px;background:#f6fbf7;">
+    <td class="pad" bgcolor="#f6fbf7" style="padding:20px 44px;background:#f6fbf7;background-image:linear-gradient(90deg,#ffffff 0%,#f1faf3 35%,#e2f4e6 70%,#d3eed9 100%);">
       <div style="font-size:11px;letter-spacing:3px;font-weight:800;color:#14833b;text-transform:uppercase;">Services</div>
-      <h2 class="h2" style="margin:10px 0 8px;font-size:29px;line-height:35px;color:#075326;font-weight:800;">Data engineering &amp; AI service portfolio</h2>
-      <p style="margin:0 0 22px;font-size:15px;line-height:23px;color:#587064;">Technical services for data platform modernization, engineering and intelligent solutions.</p>
+      <h2 class="h2" style="margin:10px 0 8px;font-size:29px;line-height:35px;color:#075326;font-weight:800;">What We Do</h2>
+      <p style="margin:0 0 18px;font-size:15px;line-height:23px;color:#587064;">Practical cloud, data engineering and AI solutions for modern businesses.</p>
 
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
-        <tr><td style="padding:0 0 12px;">
-          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background:#fff;border:1px solid #cfe5d4;border-radius:10px;">
-            <tr>
-              <td width="64" valign="top" style="padding:18px 0 18px 18px;"><table role="presentation" cellpadding="0" cellspacing="0"><tr><td width="40" height="40" align="center" bgcolor="#14833b" style="width:40px;height:40px;background:#14833b;border-radius:20px;color:#fff;font-size:14px;font-weight:800;">01</td></tr></table></td>
-              <td valign="top" style="padding:18px 18px 18px 6px;">
-                <div style="font-size:16px;font-weight:800;color:#075326;margin-bottom:4px;">Consulting &amp; data engineering pathways</div>
-                <div style="font-size:13px;line-height:20px;color:#587064;">End-to-end data strategy for transformation journeys: modernization roadmaps, platform selection and discovery workshops.</div>
-              </td>
-            </tr>
-          </table>
-        </td></tr>
-
-        <tr><td style="padding:0 0 12px;">
-          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background:#fff;border:1px solid #cfe5d4;border-radius:10px;">
-            <tr>
-              <td width="64" valign="top" style="padding:18px 0 18px 18px;"><table role="presentation" cellpadding="0" cellspacing="0"><tr><td width="40" height="40" align="center" bgcolor="#14833b" style="width:40px;height:40px;background:#14833b;border-radius:20px;color:#fff;font-size:14px;font-weight:800;">02</td></tr></table></td>
-              <td valign="top" style="padding:18px 18px 18px 6px;">
-                <div style="font-size:16px;font-weight:800;color:#075326;margin-bottom:4px;">Data migration &amp; modernization</div>
-                <div style="font-size:13px;line-height:20px;color:#587064;">Cloud data engineering, modern pipelines, cloud migration, lakehouse adoption, data warehouse and ETL modernization.</div>
-              </td>
-            </tr>
-          </table>
-        </td></tr>
-
-        <tr><td style="padding:0 0 12px;">
-          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background:#fff;border:1px solid #cfe5d4;border-radius:10px;">
-            <tr>
-              <td width="64" valign="top" style="padding:18px 0 18px 18px;"><table role="presentation" cellpadding="0" cellspacing="0"><tr><td width="40" height="40" align="center" bgcolor="#14833b" style="width:40px;height:40px;background:#14833b;border-radius:20px;color:#fff;font-size:14px;font-weight:800;">03</td></tr></table></td>
-              <td valign="top" style="padding:18px 18px 18px 6px;">
-                <div style="font-size:16px;font-weight:800;color:#075326;margin-bottom:4px;">Data marketplace &amp; governance</div>
-                <div style="font-size:13px;line-height:20px;color:#587064;">Data exchange platforms, data APIs, virtualization, cataloging, quality and governed data access.</div>
-              </td>
-            </tr>
-          </table>
-        </td></tr>
-
-        <tr><td style="padding:0 0 12px;">
-          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background:#fff;border:1px solid #cfe5d4;border-radius:10px;">
-            <tr>
-              <td width="64" valign="top" style="padding:18px 0 18px 18px;"><table role="presentation" cellpadding="0" cellspacing="0"><tr><td width="40" height="40" align="center" bgcolor="#14833b" style="width:40px;height:40px;background:#14833b;border-radius:20px;color:#fff;font-size:14px;font-weight:800;">04</td></tr></table></td>
-              <td valign="top" style="padding:18px 18px 18px 6px;">
-                <div style="font-size:16px;font-weight:800;color:#075326;margin-bottom:4px;">Data operations</div>
-                <div style="font-size:13px;line-height:20px;color:#587064;">Platform maintenance, observability, automation and DataOps for a dependable data management lifecycle.</div>
-              </td>
-            </tr>
-          </table>
-        </td></tr>
-
-        <tr><td>
-          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background:#fff;border:1px solid #cfe5d4;border-radius:10px;">
-            <tr>
-              <td width="64" valign="top" style="padding:18px 0 18px 18px;"><table role="presentation" cellpadding="0" cellspacing="0"><tr><td width="40" height="40" align="center" bgcolor="#67be35" style="width:40px;height:40px;background:#14833b;border-radius:20px;color:#ffff;font-size:14px;font-weight:800;">05</td></tr></table></td>
-              <td valign="top" style="padding:18px 18px 18px 6px;">
-                <div style="font-size:16px;font-weight:800;color:#075326;margin-bottom:4px;">AI services</div>
-                <div style="font-size:13px;line-height:20px;color:#587064;">Machine learning, NLP, MLOps, AutoML, deep learning, augmented analytics, BI and data visualization.</div>
-              </td>
-            </tr>
-          </table>
-        </td></tr>
+        <tr>
+          <td class="stack stack-gap" width="50%" valign="top" style="padding:0 12px 8px 0;">
+            <table class="service-item" role="presentation" width="100%" cellpadding="0" cellspacing="0">
+              <tr><td width="28" valign="top" style="width:28px;color:#14833b;font-size:20px;line-height:22px;">&#9635;</td><td><div style="font-size:16px;font-weight:800;color:#173126;">Consulting & data engineering</div><div style="font-size:14px;line-height:22px;color:#587064;">Strategy, roadmaps and practical data platform guidance</div></td></tr>
+            </table>
+          </td>
+          <td class="stack stack-gap" width="50%" valign="top" style="padding:0 0 8px 12px;">
+            <table class="service-item" role="presentation" width="100%" cellpadding="0" cellspacing="0">
+              <tr><td width="28" valign="top" style="width:28px;color:#14833b;font-size:20px;line-height:22px;">&#x2601;</td><td><div style="font-size:16px;font-weight:800;color:#173126;">Migration & modernization</div><div style="font-size:14px;line-height:22px;color:#587064;">Cloud migration, pipelines, lakehouses and warehouse modernization.</div></td></tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="stack stack-gap" width="50%" valign="top" style="padding:0 12px 8px 0;">
+            <table class="service-item" role="presentation" width="100%" cellpadding="0" cellspacing="0">
+              <tr><td width="28" valign="top" style="width:28px;color:#14833b;font-size:20px;line-height:22px;">&#10003;</td><td><div style="font-size:16px;font-weight:800;color:#173126;">Data marketplace</div><div style="font-size:14px;line-height:22px;color:#587064;">Cataloging, quality, APIs and governed data access.</div></td></tr>
+            </table>
+          </td>
+          <td class="stack stack-gap" width="50%" valign="top" style="padding:0 0 8px 12px;">
+            <table class="service-item" role="presentation" width="100%" cellpadding="0" cellspacing="0">
+              <tr><td width="28" valign="top" style="width:28px;color:#14833b;font-size:20px;line-height:22px;">&#9881;</td><td><div style="font-size:16px;font-weight:800;color:#173126;">Data Operations</div><div style="font-size:14px;line-height:22px;color:#587064;">Reliable maintenance, observability and DataOps automation.</div></td></tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="stack" width="50%" valign="top" style="padding:0 12px 0 0;">
+            <table class="service-item" role="presentation" width="100%" cellpadding="0" cellspacing="0">
+              <tr><td width="28" valign="top" style="width:28px;color:#14833b;font-size:20px;line-height:22px;">&#10022;</td><td><div style="font-size:16px;font-weight:800;color:#173126;">AI &amp; Analytics</div><div style="font-size:14px;line-height:22px;color:#587064;">ML, NLP, MLOps, BI and visualization.</div></td></tr>
+            </table>
+          </td>
+        </tr>
       </table>
     </td>
   </tr>
 
   <!-- Solutions & platforms -->
-  <tr>
-    <td class="pad" bgcolor="#eef8f0" style="padding:46px 44px 40px;background:#eef8f0;background-image:linear-gradient(180deg,#ffffff 0%,#f1faf3 35%,#e2f4e6 70%,#d3eed9 100%);">
+ <tr>
+    <td class="pad" bgcolor="#eef8f0" style="padding:20px 44px 0px;background:#eef8f0;background-image:linear-gradient(-90deg,#ffffff 0%,#f1faf3 35%,#e2f4e6 70%,#d3eed9 100%);">
       <div style="font-size:11px;letter-spacing:3px;font-weight:800;color:#14833b;text-transform:uppercase;">Solutions &amp; platforms</div>
-      <h2 class="h2" style="margin:10px 0 8px;font-size:29px;line-height:35px;color:#075326;font-weight:800;">Connected platforms.<br />Flexible solutions.</h2>
-      <p style="margin:0 0 20px;font-size:15px;line-height:23px;color:#587064;">We align technology choices to your existing environment, delivery model and business priorities.</p>
+      <h2 class="h2" style="margin:10px 0 8px;font-size:29px;line-height:35px;color:#075326;font-weight:800;">Connected platforms. Flexible solutions.</h2>
+      <p style="margin:0 0 18px;font-size:15px;line-height:23px;color:#587064;">Technology choices aligned to your environment and priorities.</p>
 
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
-        <tr><td style="padding:12px 0;border-top:1px solid #cfe5d4;font-size:14px;line-height:21px;color:#587064;"><strong style="color:#075326;">Lakehouse implementation</strong> — Foundations for engineering, warehousing, analytics and AI workloads.</td></tr>
-        <tr><td style="padding:12px 0;border-top:1px solid #cfe5d4;font-size:14px;line-height:21px;color:#587064;"><strong style="color:#075326;">EDW modernization</strong> — Pathways from traditional warehouses to cloud data platforms.</td></tr>
-        <tr><td style="padding:12px 0;border-top:1px solid #cfe5d4;font-size:14px;line-height:21px;color:#587064;"><strong style="color:#075326;">Legacy migration</strong> — Assessment, sequencing, secure transfer and validation for critical workloads.</td></tr>
-        <tr><td style="padding:12px 0;border-top:1px solid #cfe5d4;border-bottom:1px solid #cfe5d4;font-size:14px;line-height:21px;color:#587064;"><strong style="color:#075326;">Governed data access</strong> — Catalog, permissions, lineage and operational controls for trusted data use.</td></tr>
+        <tr><td style="padding:10px 0;border-top:1px solid #cfe5d4;">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+            <td valign="middle" style="font-size:14px;line-height:21px;color:#587064;"><strong style="color:#075326;">Lakehouse</strong> — One platform for analytics and AI.</td>
+            <td align="right" valign="middle" width="80" style="width:80px;white-space:nowrap;">
+              <table role="presentation" align="right" cellpadding="0" cellspacing="0"><tr>
+                <td width="28" height="28" align="center" valign="middle" bgcolor="#ffffff" style="width:28px;height:28px;background:#ffffff;border:1px solid #cfe5d4;border-radius:14px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7R-WgnhuX-0QSn6sKnK2374_sgFaQh1Az91h98iHa_w&s=10" width="18" height="18" alt="Databricks" style="width:18px;height:18px;object-fit:contain;margin:0 auto;" /></td>
+                <td width="6" style="width:6px;font-size:0;">&nbsp;</td>
+                <td width="28" height="28" align="center" valign="middle" bgcolor="#ffffff" style="width:28px;height:28px;background:#ffffff;border:1px solid #cfe5d4;border-radius:14px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr9kkAksedf-kECODK9Cmae0W1si3R1KQpKCo0xopxNQ&s=10" width="18" height="18" alt="Apache Spark" style="width:18px;height:18px;object-fit:contain;margin:0 auto;" /></td>
+              </tr></table>
+            </td>
+          </tr></table>
+        </td></tr>
+        <tr><td style="padding:10px 0;border-top:1px solid #cfe5d4;">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+            <td valign="middle" style="font-size:14px;line-height:21px;color:#587064;"><strong style="color:#075326;">Cloud data platforms</strong> — AWS, Azure and Databricks.</td>
+            <td align="right" valign="middle" width="120" style="width:120px;white-space:nowrap;">
+              <table role="presentation" align="right" cellpadding="0" cellspacing="0"><tr>
+                <td width="28" height="28" align="center" valign="middle" bgcolor="#ffffff" style="width:28px;height:28px;background:#ffffff;border:1px solid #cfe5d4;border-radius:14px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRARfmMw3DsSdX2-689RPyIo4391sPJjyAvwt0jzw-Tig&s" width="18" height="18" alt="AWS" style="width:18px;height:18px;object-fit:contain;margin:0 auto;" /></td>
+                <td width="6" style="width:6px;font-size:0;">&nbsp;</td>
+                <td width="28" height="28" align="center" valign="middle" bgcolor="#ffffff" style="width:28px;height:28px;background:#ffffff;border:1px solid #cfe5d4;border-radius:14px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJkJOcmDB_OdPcyw9Xvv2Pgco40bHwgoFHLjCoahYGzQ&s=10" width="18" height="18" alt="Azure" style="width:18px;height:18px;object-fit:contain;margin:0 auto;" /></td>
+                <td width="6" style="width:6px;font-size:0;">&nbsp;</td>
+                <td width="28" height="28" align="center" valign="middle" bgcolor="#ffffff" style="width:28px;height:28px;background:#ffffff;border:1px solid #cfe5d4;border-radius:14px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7R-WgnhuX-0QSn6sKnK2374_sgFaQh1Az91h98iHa_w&s=10" width="18" height="18" alt="Databricks" style="width:18px;height:18px;object-fit:contain;margin:0 auto;" /></td>
+              </tr></table>
+            </td>
+          </tr></table>
+        </td></tr>
+        <tr><td style="padding:10px 0;border-top:1px solid #cfe5d4;border-bottom:1px solid #cfe5d4;">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+            <td valign="middle" style="font-size:14px;line-height:21px;color:#587064;"><strong style="color:#075326;">Automation</strong> — Repeatable deployments with Terraform.</td>
+            <td align="right" valign="middle" width="40" style="width:40px;white-space:nowrap;">
+              <table role="presentation" align="right" cellpadding="0" cellspacing="0"><tr>
+                <td width="28" height="28" align="center" valign="middle" bgcolor="#ffffff" style="width:28px;height:28px;background:#ffffff;border:1px solid #cfe5d4;border-radius:14px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqdGb41IRwPmA1-AFC0BcdFJIGnteCPKdA2V8AaJ1tbw&s=10" width="18" height="18" alt="Terraform" style="width:18px;height:18px;object-fit:contain;margin:0 auto;" /></td>
+              </tr></table>
+            </td>
+          </tr></table>
+        </td></tr>
       </table>
 
-      <div style="margin:28px 0 10px;font-size:11px;letter-spacing:2px;font-weight:800;color:#587064;text-transform:uppercase;text-align:center;">Technologies we work with</div>
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
-        <tr>
-          <td width="33%" align="center" style="padding:5px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background:#ffffff;border:1px solid #cfe5d4;border-radius:8px;"><tr><td align="center" height="64" style="height:64px;padding:8px;"><img src="email-images/Amazon_Web_Services_Logo.svg" alt="AWS" style="max-width:110px;max-height:34px;margin:0 auto;" /></td></tr></table></td>
-          <td width="33%" align="center" style="padding:5px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background:#ffffff;border:1px solid #cfe5d4;border-radius:8px;"><tr><td align="center" height="64" style="height:64px;padding:8px;"><img src="email-images/Microsoft_Azure_Logo.svg" alt="Azure" style="max-width:110px;max-height:34px;margin:0 auto;" /></td></tr></table></td>
-          <td width="33%" align="center" style="padding:5px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background:#ffffff;border:1px solid #cfe5d4;border-radius:8px;"><tr><td align="center" height="64" style="height:64px;padding:8px;"><img src="email-images/Databricks_Logo.png" alt="Databricks" style="max-width:110px;max-height:34px;margin:0 auto;" /></td></tr></table></td>
-        </tr>
-        <tr>
-          <td width="33%" align="center" style="padding:5px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background:#ffffff;border:1px solid #cfe5d4;border-radius:8px;"><tr><td align="center" height="64" style="height:64px;padding:8px;"><img src="email-images/Apache_Spark_logo.svg" alt="Apache Spark" style="max-width:110px;max-height:34px;margin:0 auto;" /></td></tr></table></td>
-          <td width="33%" align="center" style="padding:5px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background:#ffffff;border:1px solid #cfe5d4;border-radius:8px;"><tr><td align="center" height="64" style="height:64px;padding:8px;"><img src="email-images/Terraform_Product_Vendor_Logo.svg" alt="Terraform" style="max-width:110px;max-height:34px;margin:0 auto;" /></td></tr></table></td>
-          <td width="33%" align="center" style="padding:5px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background:#ffffff;border:1px solid #cfe5d4;border-radius:8px;"><tr><td align="center" height="64" style="height:64px;padding:8px;"><img src="email-images/claude-logo-png_seeklogo-554540.png" alt="Claude" style="max-width:110px;max-height:34px;margin:0 auto;" /></td></tr></table></td>
-        </tr>
-      </table>
+     
     </td>
   </tr>
 
   <!-- Delivery approach -->
   <tr>
-    <td class="pad" bgcolor="#f6fbf7" style="padding:46px 44px;background:#f6fbf7;">
+    <td class="pad" bgcolor="#f6fbf7" style="padding:20px 44px;background:#f6fbf7;">
       <div style="font-size:11px;letter-spacing:3px;font-weight:800;color:#14833b;text-transform:uppercase;">Delivery approach</div>
-      <h2 class="h2" style="margin:10px 0 8px;font-size:29px;line-height:35px;color:#075326;font-weight:800;">A clear path from requirement to solution.</h2>
-      <p style="margin:0 0 22px;font-size:15px;line-height:23px;color:#587064;">A collaborative approach that establishes shared expectations, scope, architecture and acceptance criteria.</p>
 
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:10px;">
         <tr>
           <td class="stack stack-gap" width="25%" valign="top" style="padding:0 6px 0 0;">
             <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td height="4" bgcolor="#14833b" style="height:4px;line-height:4px;font-size:0;background:#14833b;border-radius:2px;">&nbsp;</td></tr>
@@ -306,13 +252,13 @@
 
   <!-- Contact / CTA -->
   <tr>
-    <td class="pad" bgcolor="#075326" style="padding:50px 44px;background:#075326;background-image:linear-gradient(145deg,#075326 0%,#0e6f33 60%,#14833b 100%);">
+    <td class="pad" bgcolor="#075326" style="padding:20px 44px;background:#075326;background-image:linear-gradient(145deg,#075326 0%,#0e6f33 60%,#14833b 100%);">
       <div style="font-size:11px;letter-spacing:3px;font-weight:800;color:#c7f77e;text-transform:uppercase;">Contact</div>
       <h2 class="h2" style="margin:10px 0 12px;font-size:29px;line-height:35px;color:#ffffff;font-weight:800;">A conversation, not a prescriptive pitch.</h2>
-      <p style="margin:0 0 24px;font-size:15px;line-height:24px;color:#e3f7e4;">
+      <p style="margin:0 0 10px;font-size:15px;line-height:24px;color:#e3f7e4;">
         Let&rsquo;s discuss your roadmap and where business value is greatest. Would you be open to a 20-minute discussion to explore your data and technology priorities?
       </p>
-      <table role="presentation" cellpadding="0" cellspacing="0" style="margin-bottom:30px;">
+      <table role="presentation" cellpadding="0" cellspacing="0" style="margin-bottom:10px;">
         <tr><td bgcolor="#67be35" style="border-radius:8px;background:#67be35;">
           <a href="mailto:partnerops@bayancloudtech.com?subject=20-minute%20discussion" style="display:inline-block;padding:14px 28px;font-size:15px;font-weight:800;color:#053a1a;text-decoration:none;">Schedule a conversation &rarr;</a>
         </td>
