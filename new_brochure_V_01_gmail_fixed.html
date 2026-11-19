@@ -1,471 +1,261 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="BayanCloudTech Databricks-focused consulting and implementation brochure">
-  <title>BayanCloudTech | Databricks Consulting &amp; Implementation</title>
-  <style>
-    :root {
-      --green: #14833b;
-      --dark-green: #075326;
-      --lime: #67be35;
-      --databricks-red: #ff3621;
-      --ink: #172331;
-      --muted: #5b6876;
-      --line: #dce3e8;
-      --soft: #f5f8fa;
-      --pale-green: #eaf7ed;
-      --white: #fff;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background: #e9eef1;
-      color: var(--ink);
-      font: 16px/1.55 Arial, Helvetica, sans-serif;
-    }
-    a { color: inherit; }
-    .brochure {
-      width: 100%;
-      max-width: 1000px;
-      margin: 28px auto;
-      overflow: hidden;
-      background: var(--white);
-      box-shadow: 0 16px 42px #11212d1c;
-      box-sizing: border-box;
-    }
-    .hero {
-      position: relative;
-      overflow: hidden;
-      padding: 12px 24px 24px;
-      color: var(--white);
-      background:
-        radial-gradient(circle at 88% 18%, #ff362133 0, transparent 26%),
-        linear-gradient(140deg, #07111c 0%, #142432 56%, #075326 150%);
-    }
-    .hero::after {
-      position: absolute;
-      right: -170px;
-      bottom: -240px;
-      width: 520px;
-      height: 520px;
-      border: 1px solid #ffffff2e;
-      border-radius: 50%;
-      content: "";
-    }
-    .brand-bar, .hero-content, .section-inner { position: relative; z-index: 1; }
-    .hero-content { max-width: 790px; margin-top: 20px; }
-    .databricks-lockup {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 9px;
-      padding: 8px 12px;
-      border: 1px solid #ffffff36;
-      border-radius: 7px;
-      background: #00000036;
-      color: var(--white);
-      font-size: 14px;
-      font-weight: 800;
-      letter-spacing: .3px;
-    }
-    .databricks-mark {
-      display: block;
-      flex: 0 0 27px;
-      width: 27px;
-      height: 25px;
-      overflow: hidden;
-    }
-    .databricks-mark img {
-      display: block;
-      width: 159px;
-      max-width: none;
-      height: 25px;
-    }
-    .databricks-lockup strong { color: #ff796c; }
-    .eyebrow {
-      color: var(--green);
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-    }
-    .hero .eyebrow { color: #b7f086; }
-    h1, h2, h3, p { margin-top: 0; }
-    h1 {
-      max-width: 780px;
-      margin: 8px 0 8px;
-      color: var(--white);
-      font-size: clamp(42px, 6vw, 68px);
-      line-height: 1.03;
-      letter-spacing: -2px;
-    }
-    .hero-support {
-      margin: 0 0 14px;
-      color: #ffb6ad;
-      font-size: 23px;
-      font-weight: 800;
-    }
-    .hero-description {
-      max-width: 710px;
-      margin-bottom: 28px;
-      color: #e6edf2;
-      font-size: 18px;
-      line-height: 1.6;
-    }
-    .button-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
-    .button {
-      display: inline-block;
-      padding: 12px 18px;
-      border-radius: 5px;
-      font-size: 14px;
-      font-weight: 800;
-      text-decoration: none;
-    }
-    .button-primary { background: var(--databricks-red); color: var(--white); }
-    .button-secondary { border: 1px solid #ffffff75; color: var(--white); }
-    section { padding: 18px 24px; }
-    .section-heading { max-width: 780px; margin-bottom: 8px; }
-    h2 {
-      position: relative;
-      margin: 5px 0 15px;
-      color: #0c2e45;
-      font-size: clamp(28px, 4vw, 40px);
-      font-weight: 800;
-      line-height: 1.12;
-      letter-spacing: -.8px;
-    }
-    h2::after {
-      display: block;
-      width: 52px;
-      height: 4px;
-      margin-top: 11px;
-      border-radius: 4px;
-      background: linear-gradient(90deg, var(--databricks-red), #ff9a68);
-      content: "";
-    }
-    h3 {
-      margin: 0 0 7px;
-      color: #0c2e45;
-      font-size: 19px;
-      font-weight: 800;
-      line-height: 1.2;
-      letter-spacing: -.2px;
-    }
-    .section-heading p, .intro-copy {
-      margin-bottom: 0;
-      color: var(--muted);
-      font-size: 17px;
-      line-height: 1.65;
-    }
-    .intro-section { background: var(--white); }
-    .intro-callout {
-      display: grid;
-      grid-template-columns: 7px 1fr;
-      margin-top: 8px;
-      background: var(--pale-green);
-    }
-    .intro-callout-bar { background: var(--lime); }
-    .intro-callout-content { padding: 8px 12px; }
-    .intro-callout-content strong { color: var(--dark-green); }
-    .services-section { background: var(--soft); }
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 6px;
-    }
-    .service-card {
-      display: flex;
-      gap: 8px;
-      min-height: 0;
-      padding: 10px;
-      border: 1px solid var(--line);
-      border-top: 4px solid var(--databricks-red);
-      border-radius: 8px;
-      background: var(--white);
-      box-shadow: 0 5px 16px #1323330a;
-    }
-    .service-card:last-child { grid-column: 1 / -1; }
-    .service-icon {
-      display: grid;
-      flex: 0 0 40px;
-      place-items: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 8px;
-      background: #fff0ed;
-      color: var(--databricks-red);
-      font-size: 21px;
-      font-weight: 800;
-    }
-    .service-card p { margin: 0; color: var(--muted); font-size: 14px; }
-    .platforms-section { background: #111d29; color: var(--white); }
-    .platforms-section h2 { color: var(--white); }
-    .platforms-section .section-heading p { color: #c3ced7; }
-    .platforms-section .eyebrow { color: #b7f086; }
-    .platform-primary {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      margin-bottom: 24px;
-      padding: 20px 24px;
-      border: 1px solid #ff362166;
-      border-radius: 8px;
-      background: linear-gradient(100deg, #2b2023, #171d25);
-    }
-    .platform-primary img { width: 72px; height: 48px; object-fit: contain; }
-    .platform-primary strong { display: block; color: #ff897d; font-size: 21px; }
-    .platform-primary span { color: #d5dee5; font-size: 14px; }
-    .platform-groups { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-    .platform-group {
-      padding: 20px;
-      border: 1px solid #ffffff21;
-      border-radius: 8px;
-      background: #ffffff0b;
-    }
-    .platform-group h3 { color: #fff; font-size: 15px; letter-spacing: .3px; }
-    .platform-items { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 13px; }
-    .platform-item {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      min-height: 40px;
-      padding: 6px 10px;
-      border: 1px solid #ffffff2b;
-      border-radius: 5px;
-      color: #e5edf2;
-      font-size: 13px;
-      font-weight: 700;
-    }
-    .platform-item img { width: 25px; height: 25px; object-fit: contain; background: #fff; }
-    .text-tech { background: #ffffff16; }
-    .credibility-section { background: var(--white); }
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 8px;
-      margin-top: 8px;
-    }
-    .stat {
-      padding: 11px 12px;
-      border-top: 4px solid var(--green);
-      background: var(--pale-green);
-    }
-    .stat strong { display: block; color: var(--dark-green); font-size: 37px; line-height: 1; }
-    .stat span { display: block; margin-top: 9px; color: #385346; font-size: 14px; font-weight: 800; }
-    .delivery-section { background: var(--soft); }
-    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; counter-reset: step; }
-    .step {
-      position: relative;
-      padding: 10px 9px 9px;
-      border-top: 3px solid var(--databricks-red);
-      background: var(--white);
-    }
-    .step:not(:last-child)::after {
-      position: absolute;
-      top: -3px;
-      right: -14px;
-      width: 14px;
-      height: 3px;
-      background: var(--databricks-red);
-      content: "";
-    }
-    .step-number { color: var(--databricks-red); font-size: 11px; font-weight: 800; letter-spacing: 1px; }
-    .step h3 { margin-top: 7px; }
-    .step p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
-    .contact-section {
-      background: linear-gradient(140deg, var(--dark-green), #122631 75%);
-      color: var(--white);
-    }
-    .contact-section h2 { color: var(--white); }
-    .contact-section .section-heading p { color: #d7e8dc; }
-    .contact-section .eyebrow { color: #b7f086; }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px 24px;
-      margin-top: 12px;
-    }
-    .contact-item { min-width: 0; padding-top: 14px; border-top: 1px solid #ffffff3d; }
-    .contact-item strong { display: block; color: #b7f086; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; }
-    .contact-item p { margin: 6px 0 0; color: var(--white); font-size: 14px; line-height: 1.65; }
-    .contact-item a { color: var(--white); font-weight: 700; overflow-wrap: anywhere; word-break: break-word; }
-    footer { padding: 10px 24px; background: #053a1a; color: #b8d2bf; font-size: 12px; text-align: center; }
-    @media (max-width: 760px) {
-      .brochure { width: 100%; max-width: 100%; margin: 0; }
-      .hero, section { padding-left: 24px; padding-right: 24px; }
-      footer { padding: 10px 24px; }
-      .brand-logo { font-size: 19px; }
-      .hero-content { margin-top: 24px; }
-      .service-grid, .platform-groups { grid-template-columns: 1fr; }
-      .contact-grid { grid-template-columns: 1fr; }
-      .service-card:last-child { grid-column: auto; }
-      .steps { grid-template-columns: repeat(2, 1fr); }
-      .step:not(:last-child)::after { display: none; }
-    }
-    @media (max-width: 600px) {
-      .hero, section { padding-left: 16px; padding-right: 16px; }
-      footer { padding-left: 16px; padding-right: 16px; }
-      .gmail-header td { padding-left: 8px !important; padding-right: 8px !important; }
-      .gmail-header td:first-child img { width:112px !important; }
-      .gmail-header td:last-child span {
-        padding:5px 7px !important;
-        font-size:8px !important;
-        line-height:11px !important;
-        letter-spacing:0 !important;
-      }
-      h1 { font-size:36px; line-height:1.08; letter-spacing:-1px; }
-      h2 { font-size:28px; }
-      .databricks-lockup { max-width:100%; font-size:12px; }
-      .stats { grid-template-columns:1fr; }
-      .steps { grid-template-columns:1fr; }
-      .button-row { flex-direction:column; align-items:stretch; }
-      .button { width:100%; text-align:center; box-sizing:border-box; }
-      .service-card { width:100%; }
-      .contact-item { overflow-wrap:anywhere; }
-    }
-    @media (max-width: 500px) {
-      .hero, section { padding-left: 16px; padding-right: 16px; }
-      footer { padding-left: 16px; padding-right: 16px; }
-      table[role="presentation"] td { box-sizing: border-box; }
-      h1 { font-size:32px; line-height:1.08; letter-spacing:-.8px; }
-      .hero-support { font-size: 20px; }
-      .hero-description { font-size: 16px; }
-      .stats, .steps, .contact-grid { grid-template-columns: 1fr; }
-      .step { min-height: 0; }
-      .platform-primary { align-items: flex-start; }
-    }
-    @media (max-width: 360px) {
-      .gmail-header td:first-child img { width:96px !important; }
-      .gmail-header td:last-child span { padding:4px 5px !important;font-size:7px !important;line-height:9px !important; }
-      h1 { font-size:28px; }
-      h2 { font-size:25px; }
-      .hero, section { padding-left:12px; padding-right:12px; }
-      .databricks-lockup { gap:7px; padding:7px 8px; }
-    }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="x-apple-disable-message-reformatting" />
+<meta name="color-scheme" content="light only" />
+<meta name="supported-color-schemes" content="light only" />
+<title>BayanCloudTech | Databricks Consulting &amp; Implementation</title>
+<style>
+  :root { color-scheme: light only; }
+  body { margin:0; padding:0; width:100%; background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_OwKRWFsJcFDnAFFjGW1P_L4T7qTk_Y9DHpb3Y5dgvg&s=10"); -webkit-text-size-adjust:100%; }
+  table { border-collapse:collapse; }
+  img { border:0; display:block; }
+  a { color:inherit; }
+  @media (prefers-color-scheme: dark) {
+    .wrap, .wrap td { background-color:inherit; }
+  }
+  @media only screen and (max-width:640px) {
+    .wrap { width:100% !important; }
+    .pad { padding-left:18px !important; padding-right:18px !important; }
+    .stack { display:block !important; width:100% !important; box-sizing:border-box; }
+    .gap { padding:0 0 8px 0 !important; }
+    .h1 { font-size:32px !important; line-height:36px !important; letter-spacing:-1px !important; }
+    .h2 { font-size:24px !important; line-height:29px !important; }
+    .btn { display:block !important; text-align:center !important; }
+    .btn-cell { display:block !important; width:100% !important; padding:0 0 10px 0 !important; }
+    .hide-m { display:none !important; }
+  }
+</style>
 </head>
-<body>
-  <main class="brochure">
-    <!-- Email/clipboard-safe white header. Badge is a table cell, not a span, so Gmail is less likely to drop it. -->
-    <table class="gmail-header" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="width:100%;max-width:1000px;margin:0 auto;border-collapse:collapse;table-layout:fixed;background-color:#ffffff;">
-      <tr>
-        <td width="55%" align="left" valign="middle" bgcolor="#ffffff" style="width:55%;padding:10px 24px;background-color:#ffffff;box-sizing:border-box;">
-          <img src="https://bayancloudtech.com/img/brand/bct-logo-header.png" width="150" alt="BayanCloudTech" border="0" style="display:block;width:150px;max-width:100%;height:auto;border:0;outline:none;text-decoration:none;">
-        </td>
-        <td width="45%" align="right" valign="middle" bgcolor="#ffffff" style="width:45%;padding:10px 24px;background-color:#ffffff;box-sizing:border-box;white-space:nowrap;">
-          <span style="display:inline-block;padding:7px 12px;border:1px solid #ff3028;border-radius:18px;background-color:#fff4f1;color:#ff3028;font-family:Arial,Helvetica,sans-serif;font-size:10px;line-height:13px;font-weight:bold;letter-spacing:0.2px;text-align:center;text-transform:uppercase;white-space:nowrap;">DATABRICKS SOLUTIONS<br>OVERVIEW</span>
-        </td>
-      </tr>
-    </table>
+<body style="margin:0;padding:0;background-color:#e9eef1;background-image:linear-gradient(#e9eef1,#e9eef1);font-family:Arial,Helvetica,sans-serif;color:#172331;border-radius:10px;background-image:linear-gradient(#e9eef1,#e9eef1);">
 
-    <header class="hero">
-      <div class="hero-content">
-        <div class="databricks-lockup"><span class="databricks-mark"><img src="https://bayancloudtech.com/img/brand-logos/Databricks.png" alt="Databricks mark"></span><span>Databricks-focused <strong>data &amp; AI</strong> delivery</span></div>
-        <div class="eyebrow">Databricks consulting &amp; implementation</div>
-        <h1>Accelerate Your Data &amp; AI Journey with Databricks</h1>
-      </div>
-    </header>
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;color:#e9eef1;font-size:1px;line-height:1px;">
+  Databricks consulting &amp; implementation: Lakehouse, migration, governance, analytics and AI.
+</div>
 
-    <section class="intro-section">
-      <div class="section-inner">
-        <div class="section-heading">
-          <div class="eyebrow">Why BayanCloudTech</div>
-          <h2>Engineering confidence for Databricks-powered platforms.</h2>
-          <p class="intro-copy">BayanCloudTech Consulting Group Inc. helps organizations implement, modernize and scale Databricks-powered data platforms. Our engineering expertise spans Lakehouse architecture, data migration, data engineering, governance, analytics and AI, helping businesses transform complex data environments into reliable, scalable solutions.</p>
-        </div>
-        <div class="intro-callout">
-          <div class="intro-callout-bar"></div>
-          <div class="intro-callout-content"><strong>Our focus</strong><br>Connect data systems, establish durable platform foundations and turn technical requirements into secure, maintainable Databricks solutions.</div>
-        </div>
-      </div>
-    </section>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#e9eef1" style="background-color:#e9eef1;background-image:linear-gradient(#e9eef1,#e9eef1);">
+<tr><td align="center" style="padding:20px 10px;border-radius:50px;">
 
-    <section class="services-section">
-      <div class="section-inner">
-        <div class="section-heading">
-          <div class="eyebrow">Databricks services</div>
-          <h2>From platform foundations to production operations.</h2>
-          <p>Focused services for organizations building dependable data, analytics and AI capabilities on Databricks.</p>
-        </div>
-        <div class="service-grid">
-          <article class="service-card">
-            <div class="service-icon">01</div>
-            <div><h3>Databricks Implementation</h3><p>Lakehouse architecture, workspace setup, data engineering and platform deployment.</p></div>
-          </article>
-          <article class="service-card">
-            <div class="service-icon">02</div>
-            <div><h3>Data Migration &amp; Modernization</h3><p>Legacy warehouse migration, ETL/ELT modernization, Spark engineering and Lakehouse modernization.</p></div>
-          </article>
-          <article class="service-card">
-            <div class="service-icon">03</div>
-            <div><h3>Data Governance &amp; Security</h3><p>Unity Catalog, access management, data quality, lineage and governance frameworks.</p></div>
-          </article>
-          <article class="service-card">
-            <div class="service-icon">04</div>
-            <div><h3>Analytics &amp; AI Enablement</h3><p>Databricks SQL, BI, machine learning, generative AI workflows and MLOps.</p></div>
-          </article>
-          <article class="service-card">
-            <div class="service-icon">05</div>
-            <div><h3>Managed Services &amp; DataOps</h3><p>Platform monitoring, performance and cost optimization, plus ongoing engineering support.</p></div>
-          </article>
-        </div>
-      </div>
-    </section>
+<table role="presentation" class="wrap" width="1000" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="width:1000px;max-width:1000px;background-color:#ffffff;background-image:linear-gradient(#ffffff,#ffffff);border-radius:14px;overflow:hidden;">
+  <tr><td height="6" bgcolor="#67be35" style="height:6px;line-height:6px;font-size:0;background-image:linear-gradient(140deg,#07111c 0%,#142432 56%,#0be377 130%);">&nbsp;</td></tr>
+  <!-- Header -->
+  <tr>
+    <td bgcolor="#ffffff" background="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_OwKRWFsJcFDnAFFjGW1P_L4T7qTk_Y9DHpb3Y5dgvg&s=10" style="background-color:#ffffff;padding:0;background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_OwKRWFsJcFDnAFFjGW1P_L4T7qTk_Y9DHpb3Y5dgvg&s=10);background-repeat:repeat;background-size:cover;background-position:center top;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" background="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_OwKRWFsJcFDnAFFjGW1P_L4T7qTk_Y9DHpb3Y5dgvg&s=10" style="background-color:#ffffff;background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_OwKRWFsJcFDnAFFjGW1P_L4T7qTk_Y9DHpb3Y5dgvg&s=10);background-repeat:repeat;background-size:cover;background-position:center top;">
+        <tr>
+          <td class="pad" width="55%" align="left" valign="middle" bgcolor="#ffffff" background="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_OwKRWFsJcFDnAFFjGW1P_L4T7qTk_Y9DHpb3Y5dgvg&s=10" style="background-color:#ffffff;background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_OwKRWFsJcFDnAFFjGW1P_L4T7qTk_Y9DHpb3Y5dgvg&s=10);background-repeat:repeat;background-size:cover;background-position:center top;padding:12px 24px;">
+            <img src="https://bayancloudtech.com/img/brand/bct-logo-header.png" width="150" alt="BayanCloudTech" border="0" style="display:block;width:150px;max-width:100%;height:auto;border:0;" />
+          </td>
+          <td class="pad" width="45%" align="right" valign="middle" bgcolor="#ffffff" background="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_OwKRWFsJcFDnAFFjGW1P_L4T7qTk_Y9DHpb3Y5dgvg&s=10" style="background-color:#ffffff;background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_OwKRWFsJcFDnAFFjGW1P_L4T7qTk_Y9DHpb3Y5dgvg&s=10);background-repeat:repeat;background-size:cover;background-position:center top;padding:12px 24px;">
+            <table role="presentation" align="right" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate;border-spacing:0;">
+              <tr>
+                <td align="center" bgcolor="#fff4f1" background="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_OwKRWFsJcFDnAFFjGW1P_L4T7qTk_Y9DHpb3Y5dgvg&s=10" style="background-color:#fff4f1;border:1px solid #FF3621;border-radius:10px;padding:7px 12px;font-family:Arial,Helvetica,sans-serif;font-size:10px;line-height:13px;font-weight:bold;letter-spacing:0.2px;color:#FF3621;text-transform:uppercase;background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_OwKRWFsJcFDnAFFjGW1P_L4T7qTk_Y9DHpb3Y5dgvg&s=10);background-repeat:repeat;background-size:cover;background-position:center top;">DATABRICKS SOLUTIONS<br />OVERVIEW</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 
-    <section class="credibility-section">
-      <div class="section-inner">
-        <div class="section-heading">
-          <div class="eyebrow">Delivery confidence</div>
-          <h2>Experienced Engineers. Disciplined Execution. Flexible Delivery.</h2>
-        </div>
-        <div class="stats">
-          <div class="stat"><strong>45</strong><span>Professionals</span></div>
-          <div class="stat"><strong>28</strong><span>Databricks-Certified Professionals</span></div>
-          <div class="stat"><strong>3</strong><span>Multi-Cloud Expertise: AWS | Azure | GCP</span></div>
-        </div>
-      </div>
-    </section>
+  <!-- Hero -->
+  <tr>
+    <td class="pad" bgcolor="#0f1d2a" style="background-color:#0f1d2a;background-image:linear-gradient(140deg,#07111c 0%,#142432 56%,#0b6f15 130%);padding:34px 24px 36px;">
+     <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:16px;">
+  <tr>
+    <td bgcolor="#1a2733" style="background-color:#1a2733;border:1px solid #3a4854;border-radius:7px;padding:8px 14px;font-size:14px;line-height:18px;font-weight:bold;color:#ffffff;letter-spacing:0.3px;">
 
-    <section class="delivery-section">
-      <div class="section-inner">
-        <div class="section-heading">
-          <div class="eyebrow">Delivery approach</div>
-          <h2>A clear path from Databricks requirement to working solution.</h2>
-        </div>
-        <div class="steps">
-          <article class="step"><div class="step-number">STEP 01</div><h3>Discover</h3><p>Assess existing data platforms, workloads, business objectives and technical constraints.</p></article>
-          <article class="step"><div class="step-number">STEP 02</div><h3>Design</h3><p>Define Databricks architecture, cloud integration, governance and implementation roadmap.</p></article>
-          <article class="step"><div class="step-number">STEP 03</div><h3>Build &amp; Validate</h3><p>Implement Databricks solutions, data pipelines and workloads. Validate against business and technical requirements.</p></article>
-          <article class="step"><div class="step-number">STEP 04</div><h3>Transition</h3><p>Enable teams, document solutions, optimize performance and establish ongoing operational support.</p></article>
-        </div>
-      </div>
-    </section>
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td width="27" height="25" background="https://bayancloudtech.com/img/brand-logos/Databricks.png" style="width:27px;height:25px;line-height:25px;font-size:0;background-image:url(https://bayancloudtech.com/img/brand-logos/Databricks.png);background-repeat:no-repeat;background-position:0 0;background-size:159px 25px;">&nbsp;</td>
+          <td style="padding-left:10px;font-size:14px;line-height:18px;font-weight:bold;color:#ffffff;letter-spacing:0.3px;">Databricks-focused <span style="color:#FF3621;">data &amp; AI</span> delivery</td>
+        </tr>
+      </table>
 
-    <section class="contact-section">
-      <div class="section-inner">
-        <div class="section-heading">
-          <div class="eyebrow" style="color:#b7f086">Contact</div>
-          <h2>Ready to Accelerate Your Databricks Journey?</h2>
-          <p>Let's explore how BayanCloudTech can help you implement, modernize or optimize your Databricks environment.</p>
-        </div>
-        <div class="button-row">
-          <a class="button button-primary" href="mailto:partnerops@bayancloudtech.com?subject=Databricks%2020-minute%20consultation">Book a 20-Minute Databricks Consultation</a>
-          <a class="button button-secondary" href="https://bayancloudtech.com/">Visit Our Website</a>
-        </div>
-        <div class="contact-grid">
-          <div class="contact-item"><strong>Contact</strong><p>Perry Angeles<br>Co-founder and Partner Manager</p></div>
-          <div class="contact-item"><strong>Email</strong><p><a href="mailto:partnerops@bayancloudtech.com">partnerops@bayancloudtech.com</a></p></div>
-          <div class="contact-item"><strong>Website</strong><p><a href="https://bayancloudtech.com/">https://bayancloudtech.com/</a></p></div>
-          <div class="contact-item"><strong>LinkedIn</strong><p><a href="https://www.linkedin.com/company/bayancloudtech/">https://www.linkedin.com/company/bayancloudtech/</a></p></div>
-        </div>
-      </div>
-    </section>
+    </td>
+  </tr>
+</table>
+      <div style="font-size:11px;line-height:14px;font-weight:bold;letter-spacing:2.5px;color:#b7f086;text-transform:uppercase;">Databricks consulting &amp; implementation</div>
+      <h1 class="h1" style="margin:10px 0 0;font-size:46px;line-height:50px;letter-spacing:-1.5px;color:#ffffff;font-weight:bold;">Accelerate Your Data &amp; AI Journey with Databricks</h1>
+    </td>
+  </tr>
 
-    <footer>BayanCloudTech Consulting Group Inc. &nbsp;·&nbsp; Building Possibilities. Delivering Impact.</footer>
-  </main>
+  <!-- Intro -->
+  <tr>
+    <td class="pad" bgcolor="#ffffff" style="background-color:#ffffff;padding:30px 24px 15px;background-image:linear-gradient(#ffffff,#ffffff);">
+      <div style="font-size:11px;line-height:14px;font-weight:bold;letter-spacing:2.5px;color:#14833b;text-transform:uppercase;">Why BayanCloudTech</div>
+      <h2 class="h2" style="margin:8px 0 10px;font-size:30px;line-height:35px;letter-spacing:-0.6px;color:#0c2e45;font-weight:bold;">Engineering confidence for Databricks-powered platforms.</h2>
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 16px;"><tr><td width="52" height="4" bgcolor="#ff3621" style="width:52px;height:4px;line-height:4px;font-size:0;background-color:#ff3621;border-radius:4px;">&nbsp;</td></tr></table>
+      <p style="margin:0 0 18px;font-size:16px;line-height:26px;color:#5b6876;">BayanCloudTech Consulting Group Inc. helps organizations implement, modernize and scale Databricks-powered data platforms. Our engineering expertise spans Lakehouse architecture, data migration, data engineering, governance, analytics and AI, helping businesses transform complex data environments into reliable, scalable solutions.</p>
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td width="7" bgcolor="#67be35" style="width:7px;background-color:#67be35;">&nbsp;</td>
+          <td bgcolor="#eaf7ed" style="background-color:#eaf7ed;padding:14px 18px;font-size:14px;line-height:22px;color:#385346;background-image:linear-gradient(#eaf7ed,#eaf7ed);"><strong style="color:#075326;">Our focus</strong><br />Connect data systems, establish durable platform foundations and turn technical requirements into secure, maintainable Databricks solutions.</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- Services -->
+  <tr>
+    <td class="pad" bgcolor="#f5f8fa" style="background-color:#f5f8fa;padding:15px 24px 15px;background-image:linear-gradient(#f5f8fa,#f5f8fa);">
+      <div style="font-size:11px;line-height:14px;font-weight:bold;letter-spacing:2.5px;color:#14833b;text-transform:uppercase;">Databricks services</div>
+      <h2 class="h2" style="margin:8px 0 10px;font-size:30px;line-height:35px;letter-spacing:-0.6px;color:#0c2e45;font-weight:bold;">From platform foundations to production operations.</h2>
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 14px;"><tr><td width="52" height="4" bgcolor="#ff3621" style="width:52px;height:4px;line-height:4px;font-size:0;background-color:#ff3621;border-radius:4px;">&nbsp;</td></tr></table>
+      <p style="margin:0 0 18px;font-size:16px;line-height:26px;color:#5b6876;">Focused services for organizations building dependable data, analytics and AI capabilities on Databricks.</p>
+
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="stack gap" width="50%" valign="top" style="padding:0 5px 10px 0;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="background-color:#ffffff;border:1px solid #dce3e8;border-top:4px solid #ff3621;border-radius:8px;background-image:linear-gradient(#ffffff,#ffffff);">
+              <tr>
+                <td width="40" valign="top" style="padding:12px 0 12px 12px;"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td width="40" height="40" align="center" valign="middle" bgcolor="#fff0ed" style="width:40px;height:40px;background-color:#fff0ed;border-radius:8px;color:#ff3621;font-size:15px;font-weight:bold;background-image:linear-gradient(#fff0ed,#fff0ed);">01</td></tr></table></td>
+                <td valign="top" style="padding:12px 12px 12px 10px;"><div style="font-size:16px;line-height:20px;font-weight:bold;color:#0c2e45;margin-bottom:5px;">Databricks Implementation</div><div style="font-size:13px;line-height:20px;color:#5b6876;">Lakehouse architecture, workspace setup, data engineering and platform deployment.</div></td>
+              </tr>
+            </table>
+          </td>
+          <td class="stack gap" width="50%" valign="top" style="padding:0 0 10px 5px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="background-color:#ffffff;border:1px solid #dce3e8;border-top:4px solid #ff3621;border-radius:8px;background-image:linear-gradient(#ffffff,#ffffff);">
+              <tr>
+                <td width="40" valign="top" style="padding:12px 0 12px 12px;"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td width="40" height="40" align="center" valign="middle" bgcolor="#fff0ed" style="width:40px;height:40px;background-color:#fff0ed;border-radius:8px;color:#ff3621;font-size:15px;font-weight:bold;background-image:linear-gradient(#fff0ed,#fff0ed);">02</td></tr></table></td>
+                <td valign="top" style="padding:12px 12px 12px 10px;"><div style="font-size:16px;line-height:20px;font-weight:bold;color:#0c2e45;margin-bottom:5px;">Data Migration &amp; Modernization</div><div style="font-size:13px;line-height:20px;color:#5b6876;">Legacy warehouse migration, ETL/ELT modernization, Spark engineering and Lakehouse modernization.</div></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="stack gap" width="50%" valign="top" style="padding:0 5px 10px 0;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="background-color:#ffffff;border:1px solid #dce3e8;border-top:4px solid #ff3621;border-radius:8px;background-image:linear-gradient(#ffffff,#ffffff);">
+              <tr>
+                <td width="40" valign="top" style="padding:12px 0 12px 12px;"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td width="40" height="40" align="center" valign="middle" bgcolor="#fff0ed" style="width:40px;height:40px;background-color:#fff0ed;border-radius:8px;color:#ff3621;font-size:15px;font-weight:bold;background-image:linear-gradient(#fff0ed,#fff0ed);">03</td></tr></table></td>
+                <td valign="top" style="padding:12px 12px 12px 10px;"><div style="font-size:16px;line-height:20px;font-weight:bold;color:#0c2e45;margin-bottom:5px;">Data Governance &amp; Security</div><div style="font-size:13px;line-height:20px;color:#5b6876;">Unity Catalog, access management, data quality, lineage and governance frameworks.</div></td>
+              </tr>
+            </table>
+          </td>
+          <td class="stack gap" width="50%" valign="top" style="padding:0 0 10px 5px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="background-color:#ffffff;border:1px solid #dce3e8;border-top:4px solid #ff3621;border-radius:8px;background-image:linear-gradient(#ffffff,#ffffff);">
+              <tr>
+                <td width="40" valign="top" style="padding:12px 0 12px 12px;"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td width="40" height="40" align="center" valign="middle" bgcolor="#fff0ed" style="width:40px;height:40px;background-color:#fff0ed;border-radius:8px;color:#ff3621;font-size:15px;font-weight:bold;background-image:linear-gradient(#fff0ed,#fff0ed);">04</td></tr></table></td>
+                <td valign="top" style="padding:12px 12px 12px 10px;"><div style="font-size:16px;line-height:20px;font-weight:bold;color:#0c2e45;margin-bottom:5px;">Analytics &amp; AI Enablement</div><div style="font-size:13px;line-height:20px;color:#5b6876;">Databricks SQL, BI, machine learning, generative AI workflows and MLOps.</div></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="stack" colspan="2" valign="top" style="padding:0;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="background-color:#ffffff;border:1px solid #dce3e8;border-top:4px solid #ff3621;border-radius:8px;background-image:linear-gradient(#ffffff,#ffffff);">
+              <tr>
+                <td width="40" valign="top" style="padding:12px 0 12px 12px;"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td width="40" height="40" align="center" valign="middle" bgcolor="#fff0ed" style="width:40px;height:40px;background-color:#fff0ed;border-radius:8px;color:#ff3621;font-size:15px;font-weight:bold;background-image:linear-gradient(#fff0ed,#fff0ed);">05</td></tr></table></td>
+                <td valign="top" style="padding:12px 12px 12px 10px;"><div style="font-size:16px;line-height:20px;font-weight:bold;color:#0c2e45;margin-bottom:5px;">Managed Services &amp; DataOps</div><div style="font-size:13px;line-height:20px;color:#5b6876;">Platform monitoring, performance and cost optimization, plus ongoing engineering support.</div></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- Delivery confidence -->
+  <tr>
+    <td class="pad" bgcolor="#ffffff" style="background-color:#ffffff;padding:20px 24px 26px;background-image:linear-gradient(#ffffff,#ffffff);">
+      <div style="font-size:11px;line-height:14px;font-weight:bold;letter-spacing:2.5px;color:#14833b;text-transform:uppercase;">Delivery confidence</div>
+      <h2 class="h2" style="margin:8px 0 10px;font-size:30px;line-height:35px;letter-spacing:-0.6px;color:#0c2e45;font-weight:bold;">Experienced Engineers. Disciplined Execution. Flexible Delivery.</h2>
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 16px;"><tr><td width="52" height="4" bgcolor="#ff3621" style="width:52px;height:4px;line-height:4px;font-size:0;background-color:#ff3621;border-radius:4px;">&nbsp;</td></tr></table>
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="stack gap" width="33%" valign="top" style="padding:0 4px 0 0;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#eaf7ed" style="background-color:#eaf7ed;border-top:4px solid #14833b;background-image:linear-gradient(#eaf7ed,#eaf7ed);"><tr><td style="padding:14px 14px 16px;"><div style="font-size:38px;line-height:40px;font-weight:bold;color:#075326;">45</div><div style="margin-top:8px;font-size:14px;line-height:19px;font-weight:bold;color:#385346;">Professionals</div></td></tr></table>
+          </td>
+          <td class="stack gap" width="33%" valign="top" style="padding:0 4px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#eaf7ed" style="background-color:#eaf7ed;border-top:4px solid #14833b;background-image:linear-gradient(#eaf7ed,#eaf7ed);"><tr><td style="padding:14px 14px 16px;"><div style="font-size:38px;line-height:40px;font-weight:bold;color:#075326;">28</div><div style="margin-top:8px;font-size:14px;line-height:19px;font-weight:bold;color:#385346;">Databricks-Certified Professionals</div></td></tr></table>
+          </td>
+          <td class="stack" width="33%" valign="top" style="padding:0 0 0 4px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#eaf7ed" style="background-color:#eaf7ed;border-top:4px solid #14833b;background-image:linear-gradient(#eaf7ed,#eaf7ed);"><tr><td style="padding:14px 14px 16px;"><div style="font-size:38px;line-height:40px;font-weight:bold;color:#075326;">3</div><div style="margin-top:8px;font-size:14px;line-height:19px;font-weight:bold;color:#385346;">Multi-Cloud Expertise: AWS | Azure | GCP</div></td></tr></table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- Delivery approach -->
+  <tr>
+    <td class="pad" bgcolor="#f5f8fa" style="background-color:#f5f8fa;padding:30px 24px 15px;background-image:linear-gradient(#f5f8fa,#f5f8fa);">
+      <div style="font-size:11px;line-height:14px;font-weight:bold;letter-spacing:2.5px;color:#14833b;text-transform:uppercase;">Delivery approach</div>
+      <h2 class="h2" style="margin:8px 0 10px;font-size:30px;line-height:35px;letter-spacing:-0.6px;color:#0c2e45;font-weight:bold;">A clear path from Databricks requirement to working solution.</h2>
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 16px;"><tr><td width="52" height="4" bgcolor="#ff3621" style="width:52px;height:4px;line-height:4px;font-size:0;background-color:#ff3621;border-radius:4px;">&nbsp;</td></tr></table>
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="stack gap" width="25%" valign="top" style="padding:0 4px 0 0;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="background-color:#ffffff;border-top:3px solid #ff3621;background-image:linear-gradient(#ffffff,#ffffff);"><tr><td style="padding:12px 10px 14px;"><div style="font-size:11px;line-height:14px;font-weight:bold;letter-spacing:1px;color:#ff3621;">STEP 01</div><div style="margin:7px 0 6px;font-size:17px;line-height:21px;font-weight:bold;color:#0c2e45;">Discover</div><div style="font-size:12px;line-height:19px;color:#5b6876;">Assess existing data platforms, workloads, business objectives and technical constraints.</div></td></tr></table>
+          </td>
+          <td class="stack gap" width="25%" valign="top" style="padding:0 4px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="background-color:#ffffff;border-top:3px solid #ff3621;background-image:linear-gradient(#ffffff,#ffffff);"><tr><td style="padding:12px 10px 14px;"><div style="font-size:11px;line-height:14px;font-weight:bold;letter-spacing:1px;color:#ff3621;">STEP 02</div><div style="margin:7px 0 6px;font-size:17px;line-height:21px;font-weight:bold;color:#0c2e45;">Design</div><div style="font-size:12px;line-height:19px;color:#5b6876;">Define Databricks architecture, cloud integration, governance and implementation roadmap.</div></td></tr></table>
+          </td>
+          <td class="stack gap" width="25%" valign="top" style="padding:0 4px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="background-color:#ffffff;border-top:3px solid #ff3621;background-image:linear-gradient(#ffffff,#ffffff);"><tr><td style="padding:12px 10px 14px;"><div style="font-size:11px;line-height:14px;font-weight:bold;letter-spacing:1px;color:#ff3621;">STEP 03</div><div style="margin:7px 0 6px;font-size:17px;line-height:21px;font-weight:bold;color:#0c2e45;">Build &amp; Validate</div><div style="font-size:12px;line-height:19px;color:#5b6876;">Implement Databricks solutions, data pipelines and workloads. Validate against business and technical requirements.</div></td></tr></table>
+          </td>
+          <td class="stack" width="25%" valign="top" style="padding:0 0 0 4px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="background-color:#ffffff;border-top:3px solid #ff3621;background-image:linear-gradient(#ffffff,#ffffff);"><tr><td style="padding:12px 10px 14px;"><div style="font-size:11px;line-height:14px;font-weight:bold;letter-spacing:1px;color:#ff3621;">STEP 04</div><div style="margin:7px 0 6px;font-size:17px;line-height:21px;font-weight:bold;color:#0c2e45;">Transition</div><div style="font-size:12px;line-height:19px;color:#5b6876;">Enable teams, document solutions, optimize performance and establish ongoing operational support.</div></td></tr></table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- Contact -->
+  <tr>
+    <td class="pad" bgcolor="#0b3d24" style="background-color:#0b3d24;background-image:linear-gradient(140deg,#075326 0%,#122631 75%);padding:20px 24px 30px;">
+      <div style="font-size:11px;line-height:14px;font-weight:bold;letter-spacing:2.5px;color:#b7f086;text-transform:uppercase;">Contact</div>
+      <h2 class="h2" style="margin:8px 0 10px;font-size:30px;line-height:35px;letter-spacing:-0.6px;color:#ffffff;font-weight:bold;">Ready to Accelerate Your Databricks Journey?</h2>
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 14px;"><tr><td width="52" height="4" bgcolor="#ff3621" style="width:52px;height:4px;line-height:4px;font-size:0;background-color:#FF3621;border-radius:4px;">&nbsp;</td></tr></table>
+      <p style="margin:0 0 20px;font-size:16px;line-height:26px;color:#d7e8dc;">Let's explore how BayanCloudTech can help you implement, modernize or optimize your Databricks environment.</p>
+
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:24px;">
+        <tr>
+          <td class="btn-cell" bgcolor="#ff3621" style="background-color:#ff3621;border-radius:5px;">
+            <a class="btn" href="mailto:partnerops@bayancloudtech.com?subject=Databricks%2020-minute%20consultation" style="display:inline-block;padding:13px 18px;font-size:14px;line-height:18px;font-weight:bold;color:#ffffff;text-decoration:none;">Book a 20-Minute Databricks Consultation</a>
+          </td>
+          <td class="hide-m" width="14" style="width:14px;">&nbsp;</td>
+          <td class="btn-cell" style="border:1px solid #8fa39a;border-radius:18px;">
+            <a class="btn" href="https://bayancloudtech.com/" style="display:inline-block;padding:12px 18px;font-size:14px;line-height:18px;font-weight:bold;color:#ffffff;text-decoration:none;">Visit Our Website</a>
+          </td>
+        </tr>
+      </table>
+
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="stack gap" width="50%" valign="top" style="padding:14px 12px 14px 0;border-top:1px solid #5b7d6a;">
+            <div style="font-size:11px;line-height:14px;font-weight:bold;letter-spacing:1.5px;color:#b7f086;text-transform:uppercase;">Contact</div>
+            <div style="margin-top:6px;font-size:14px;line-height:23px;color:#ffffff;">Perry Angeles<br />Co-founder and Partner Manager</div>
+          </td>
+          <td class="stack gap" width="50%" valign="top" style="padding:14px 0 14px 12px;border-top:1px solid #5b7d6a;">
+            <div style="font-size:11px;line-height:14px;font-weight:bold;letter-spacing:1.5px;color:#b7f086;text-transform:uppercase;">Email</div>
+            <div style="margin-top:6px;font-size:14px;line-height:23px;color:#ffffff;"><a href="mailto:partnerops@bayancloudtech.com" style="color:#ffffff;font-weight:bold;">partnerops@bayancloudtech.com</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="stack gap" width="50%" valign="top" style="padding:14px 12px 0 0;border-top:1px solid #5b7d6a;">
+            <div style="font-size:11px;line-height:14px;font-weight:bold;letter-spacing:1.5px;color:#b7f086;text-transform:uppercase;">Website</div>
+            <div style="margin-top:6px;font-size:14px;line-height:23px;color:#ffffff;"><a href="https://bayancloudtech.com/" style="color:#ffffff;font-weight:bold;">https://bayancloudtech.com/</a></div>
+          </td>
+          <td class="stack" width="50%" valign="top" style="padding:14px 0 0 12px;border-top:1px solid #5b7d6a;">
+            <div style="font-size:11px;line-height:14px;font-weight:bold;letter-spacing:1.5px;color:#b7f086;text-transform:uppercase;">LinkedIn</div>
+            <div style="margin-top:6px;font-size:14px;line-height:23px;color:#ffffff;word-break:break-word;"><a href="https://www.linkedin.com/company/bayancloudtech/" style="color:#ffffff;font-weight:bold;">linkedin.com/company/bayancloudtech</a></div>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- Footer -->
+  <tr>
+    <td align="center" bgcolor="#053a1a" style="background-color:#053a1a;padding:12px 24px;font-size:12px;line-height:18px;color:#b8d2bf;">BayanCloudTech Consulting Group Inc. &nbsp;&middot;&nbsp; Building Possibilities. Delivering Impact.</td>
+  </tr>
+
+</table>
+</td></tr>
+</table>
 </body>
 </html>
