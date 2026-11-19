@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="BayanCloudTech Databricks-focused consulting and implementation brochure">
+  <title>BayanCloudTech | Databricks Consulting &amp; Implementation</title>
+  <style>
+    :root {
+      --green: #14833b;
+      --dark-green: #075326;
+      --lime: #67be35;
+      --databricks-red: #ff3621;
+      --ink: #172331;
+      --muted: #5b6876;
+      --line: #dce3e8;
+      --soft: #f5f8fa;
+      --pale-green: #eaf7ed;
+      --white: #fff;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: #e9eef1;
+      color: var(--ink);
+      font: 16px/1.55 Arial, Helvetica, sans-serif;
+    }
+    a { color: inherit; }
+    .brochure {
+      max-width: 1080px;
+      margin: 28px auto;
+      overflow: hidden;
+      background: var(--white);
+      box-shadow: 0 16px 42px #11212d1c;
+    }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 20px 72px 42px;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 88% 18%, #ff362133 0, transparent 26%),
+        linear-gradient(140deg, #07111c 0%, #142432 56%, #075326 150%);
+    }
+    .hero::after {
+      position: absolute;
+      right: -170px;
+      bottom: -240px;
+      width: 520px;
+      height: 520px;
+      border: 1px solid #ffffff2e;
+      border-radius: 50%;
+      content: "";
+    }
+    .brand-bar, .hero-content, .section-inner { position: relative; z-index: 1; }
+    .brand-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      margin: -28px -72px 0;
+      padding: 15px 72px;
+      background: var(--white);
+    }
+    .brand-logo {
+      color: #172331;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -.5px;
+    }
+    .partner-update {
+      color: var(--databricks-red);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .8px;
+      text-align: right;
+      text-transform: uppercase;
+    }
+    .hero-content { max-width: 790px; margin-top: 34px; }
+    .databricks-lockup {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+      padding: 8px 13px;
+      border: 1px solid #ffffff36;
+      border-radius: 7px;
+      background: #00000036;
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: .3px;
+    }
+    .databricks-lockup img { width: 25px; height: 25px; object-fit: contain; }
+    .databricks-lockup strong { color: #ff796c; }
+    .eyebrow {
+      color: var(--green);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+    }
+    .hero .eyebrow { color: #b7f086; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      max-width: 780px;
+      margin: 12px 0 14px;
+      color: var(--white);
+      font-size: clamp(42px, 6vw, 68px);
+      line-height: 1.03;
+      letter-spacing: -2px;
+    }
+    .hero-support {
+      margin: 0 0 14px;
+      color: #ffb6ad;
+      font-size: 23px;
+      font-weight: 800;
+    }
+    .hero-description {
+      max-width: 710px;
+      margin-bottom: 28px;
+      color: #e6edf2;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .button-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+    .button {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .button-primary { background: var(--databricks-red); color: var(--white); }
+    .button-secondary { border: 1px solid #ffffff75; color: var(--white); }
+    section { padding: 38px 72px; }
+    .section-heading { max-width: 780px; margin-bottom: 18px; }
+    h2 {
+      margin: 8px 0 12px;
+      color: #0c2e45;
+      font-size: clamp(28px, 4vw, 40px);
+      line-height: 1.12;
+      letter-spacing: -.8px;
+    }
+    h3 { margin: 0 0 7px; color: #0c2e45; font-size: 19px; line-height: 1.2; }
+    .section-heading p, .intro-copy {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.65;
+    }
+    .intro-section { background: var(--white); }
+    .intro-callout {
+      display: grid;
+      grid-template-columns: 7px 1fr;
+      margin-top: 18px;
+      background: var(--pale-green);
+    }
+    .intro-callout-bar { background: var(--lime); }
+    .intro-callout-content { padding: 13px 18px; }
+    .intro-callout-content strong { color: var(--dark-green); }
+    .services-section { background: var(--soft); }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .service-card {
+      display: flex;
+      gap: 10px;
+      min-height: 176px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-top: 4px solid var(--databricks-red);
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: 0 5px 16px #1323330a;
+    }
+    .service-card:last-child { grid-column: 1 / -1; }
+    .service-icon {
+      display: grid;
+      flex: 0 0 40px;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: #fff0ed;
+      color: var(--databricks-red);
+      font-size: 21px;
+      font-weight: 800;
+    }
+    .service-card p { margin: 0 0 9px; color: var(--muted); font-size: 14px; }
+    .service-card ul { margin: 0; padding-left: 18px; color: #344452; font-size: 14px; line-height: 1.8; }
+    .platforms-section { background: #111d29; color: var(--white); }
+    .platforms-section h2 { color: var(--white); }
+    .platforms-section .section-heading p { color: #c3ced7; }
+    .platform-primary {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 24px;
+      padding: 20px 24px;
+      border: 1px solid #ff362166;
+      border-radius: 8px;
+      background: linear-gradient(100deg, #2b2023, #171d25);
+    }
+    .platform-primary img { width: 72px; height: 48px; object-fit: contain; }
+    .platform-primary strong { display: block; color: #ff897d; font-size: 21px; }
+    .platform-primary span { color: #d5dee5; font-size: 14px; }
+    .platform-groups { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .platform-group {
+      padding: 20px;
+      border: 1px solid #ffffff21;
+      border-radius: 8px;
+      background: #ffffff0b;
+    }
+    .platform-group h3 { color: #fff; font-size: 15px; letter-spacing: .3px; }
+    .platform-items { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 13px; }
+    .platform-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 40px;
+      padding: 6px 10px;
+      border: 1px solid #ffffff2b;
+      border-radius: 5px;
+      color: #e5edf2;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .platform-item img { width: 25px; height: 25px; object-fit: contain; background: #fff; }
+    .text-tech { background: #ffffff16; }
+    .credibility-section { background: var(--white); }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .stat {
+      padding: 18px 16px;
+      border-top: 4px solid var(--green);
+      background: var(--pale-green);
+    }
+    .stat strong { display: block; color: var(--dark-green); font-size: 37px; line-height: 1; }
+    .stat span { display: block; margin-top: 9px; color: #385346; font-size: 14px; font-weight: 800; }
+    .delivery-section { background: var(--soft); }
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; counter-reset: step; }
+    .step {
+      position: relative;
+      padding: 16px 14px 14px;
+      border-top: 3px solid var(--databricks-red);
+      background: var(--white);
+    }
+    .step:not(:last-child)::after {
+      position: absolute;
+      top: -3px;
+      right: -14px;
+      width: 14px;
+      height: 3px;
+      background: var(--databricks-red);
+      content: "";
+    }
+    .step-number { color: var(--databricks-red); font-size: 11px; font-weight: 800; letter-spacing: 1px; }
+    .step h3 { margin-top: 7px; }
+    .step p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
+    .contact-section {
+      background: linear-gradient(140deg, var(--dark-green), #122631 75%);
+      color: var(--white);
+    }
+    .contact-section h2 { color: var(--white); }
+    .contact-section .section-heading p { color: #d7e8dc; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 24px;
+      margin-top: 24px;
+    }
+    .contact-item { padding-top: 14px; border-top: 1px solid #ffffff3d; }
+    .contact-item strong { display: block; color: #b7f086; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; }
+    .contact-item p { margin: 6px 0 0; color: var(--white); font-size: 14px; line-height: 1.65; }
+    .contact-item a { color: var(--white); font-weight: 700; }
+    footer { padding: 18px 72px; background: #053a1a; color: #b8d2bf; font-size: 12px; text-align: center; }
+    @media (max-width: 760px) {
+      .brochure { margin: 0; }
+      .hero, section { padding-left: 24px; padding-right: 24px; }
+      .brand-bar { margin-left: -24px; margin-right: -24px; padding-left: 24px; padding-right: 24px; }
+      footer { padding: 18px 24px; }
+      .brand-logo { font-size: 19px; }
+      .hero-content { margin-top: 36px; }
+      .service-grid, .platform-groups { grid-template-columns: 1fr; }
+      .service-card:last-child { grid-column: auto; }
+      .steps { grid-template-columns: repeat(2, 1fr); }
+      .step:not(:last-child)::after { display: none; }
+    }
+    @media (max-width: 500px) {
+      .brand-bar { align-items: flex-start; }
+      .partner-update { max-width: 120px; font-size: 10px; line-height: 1.4; }
+      h1 { font-size: 42px; letter-spacing: -1px; }
+      .hero-support { font-size: 20px; }
+      .hero-description { font-size: 16px; }
+      .databricks-lockup { font-size: 12px; }
+      .stats, .steps, .contact-grid { grid-template-columns: 1fr; }
+      .step { min-height: 0; }
+      .platform-primary { align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <main class="brochure">
+    <header class="hero">
+      <div class="brand-bar">
+        <span class="brand-logo">BayanCloudTech</span>
+        <span class="partner-update">Databricks Solutions Overview</span>
+      </div>
+      <div class="hero-content">
+        <div class="databricks-lockup"><img src="email-images/databricks-mark-sample.png" alt="Databricks mark"><span>Databricks-focused <strong>data &amp; AI</strong> delivery</span></div>
+        <div class="eyebrow">Databricks consulting &amp; implementation</div>
+        <h1>Accelerate Your Data &amp; AI Journey with Databricks</h1>
+      </div>
+    </header>
+
+    <section class="intro-section">
+      <div class="section-inner">
+        <div class="section-heading">
+          <div class="eyebrow">Why BayanCloudTech</div>
+          <h2>Engineering confidence for Databricks-powered platforms.</h2>
+          <p class="intro-copy">BayanCloudTech Consulting Group Inc. helps organizations implement, modernize and scale Databricks-powered data platforms. Our engineering expertise spans Lakehouse architecture, data migration, data engineering, governance, analytics and AI, helping businesses transform complex data environments into reliable, scalable solutions.</p>
+        </div>
+        <div class="intro-callout">
+          <div class="intro-callout-bar"></div>
+          <div class="intro-callout-content"><strong>Our focus</strong><br>Connect data systems, establish durable platform foundations and turn technical requirements into secure, maintainable Databricks solutions.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-section">
+      <div class="section-inner">
+        <div class="section-heading">
+          <div class="eyebrow">Databricks services</div>
+          <h2>From platform foundations to production operations.</h2>
+          <p>Focused services for organizations building dependable data, analytics and AI capabilities on Databricks.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-icon">01</div>
+            <div><h3>Databricks Implementation</h3><p>Establish a practical foundation for Lakehouse delivery.</p><ul><li>Lakehouse architecture</li><li>Workspace setup and configuration</li><li>Data engineering and pipelines</li><li>Platform deployment</li></ul></div>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">02</div>
+            <div><h3>Data Migration &amp; Modernization</h3><p>Move critical workloads to a more capable data platform.</p><ul><li>Legacy data warehouse migration</li><li>ETL/ELT modernization</li><li>Apache Spark engineering</li><li>Lakehouse modernization</li></ul></div>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">03</div>
+            <div><h3>Data Governance &amp; Security</h3><p>Build trust, control and visibility into data use.</p><ul><li>Unity Catalog implementation</li><li>Data access management</li><li>Data quality and lineage</li><li>Governance frameworks</li></ul></div>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">04</div>
+            <div><h3>Analytics &amp; AI Enablement</h3><p>Turn governed data into useful insight and intelligent workflows.</p><ul><li>Databricks SQL and BI</li><li>Machine learning</li><li>Generative AI and ML workflows</li><li>MLOps</li></ul></div>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">05</div>
+            <div><h3>Managed Services &amp; DataOps</h3><p>Keep platforms dependable, efficient and ready to evolve.</p><ul><li>Platform monitoring</li><li>Performance optimization</li><li>Cost optimization</li><li>Ongoing engineering support</li></ul></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="credibility-section">
+      <div class="section-inner">
+        <div class="section-heading">
+          <div class="eyebrow">Delivery confidence</div>
+          <h2>Experienced Engineers. Disciplined Execution. Flexible Delivery.</h2>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>45</strong><span>Professionals</span></div>
+          <div class="stat"><strong>28</strong><span>Databricks-Certified Professionals</span></div>
+          <div class="stat"><strong>3</strong><span>Multi-Cloud Expertise: AWS | Azure | GCP</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="delivery-section">
+      <div class="section-inner">
+        <div class="section-heading">
+          <div class="eyebrow">Delivery approach</div>
+          <h2>A clear path from Databricks requirement to working solution.</h2>
+        </div>
+        <div class="steps">
+          <article class="step"><div class="step-number">STEP 01</div><h3>Discover</h3><p>Assess existing data platforms, workloads, business objectives and technical constraints.</p></article>
+          <article class="step"><div class="step-number">STEP 02</div><h3>Design</h3><p>Define Databricks architecture, cloud integration, governance and implementation roadmap.</p></article>
+          <article class="step"><div class="step-number">STEP 03</div><h3>Build &amp; Validate</h3><p>Implement Databricks solutions, data pipelines and workloads. Validate against business and technical requirements.</p></article>
+          <article class="step"><div class="step-number">STEP 04</div><h3>Transition</h3><p>Enable teams, document solutions, optimize performance and establish ongoing operational support.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="section-inner">
+        <div class="section-heading">
+          <div class="eyebrow" style="color:#b7f086">Contact</div>
+          <h2>Ready to Accelerate Your Databricks Journey?</h2>
+          <p>Let's explore how BayanCloudTech can help you implement, modernize or optimize your Databricks environment.</p>
+        </div>
+        <div class="button-row">
+          <a class="button button-primary" href="mailto:partnerops@bayancloudtech.com?subject=Databricks%2020-minute%20consultation">Book a 20-Minute Databricks Consultation</a>
+          <a class="button button-secondary" href="https://bayancloudtech.com/">Visit Our Website</a>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-item"><strong>Contact</strong><p>Perry Angeles<br>Co-founder and Partner Manager</p></div>
+          <div class="contact-item"><strong>Email</strong><p><a href="mailto:partnerops@bayancloudtech.com">partnerops@bayancloudtech.com</a></p></div>
+          <div class="contact-item"><strong>Website</strong><p><a href="https://bayancloudtech.com/">https://bayancloudtech.com/</a></p></div>
+          <div class="contact-item"><strong>LinkedIn</strong><p><a href="https://www.linkedin.com/company/bayancloudtech/">https://www.linkedin.com/company/bayancloudtech/</a></p></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>BayanCloudTech Consulting Group Inc. &nbsp;·&nbsp; Building Possibilities. Delivering Impact.</footer>
+  </main>
+</body>
+</html>
